@@ -1,0 +1,14 @@
+name: Ouput env
+on: push
+env:
+  HOSTNAME: localhost
+jobs:
+  output:
+    env: 
+      PORT: 8080
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output information
+        run: |
+          echo "HOSTNAME: ${{ env.HOSTNAME }}"
+          echo "PORT: ${{ env.PORT }}"
