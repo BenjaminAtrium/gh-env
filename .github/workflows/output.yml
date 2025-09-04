@@ -2,6 +2,7 @@ name: Ouput env
 on: push
 env:
   HOSTNAME: localhost
+  PASSWORD: ${{ secrets.PASSWORD }}
 jobs:
   output:
     env: 
@@ -12,3 +13,4 @@ jobs:
         run: |
           echo "HOSTNAME: ${{ env.HOSTNAME }}"
           echo "PORT: ${{ env.PORT }}"
+          echo "PASSWORD: ${{ env.PASSWORD }}"
